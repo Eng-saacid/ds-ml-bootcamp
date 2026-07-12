@@ -7,64 +7,62 @@
 # 2. Project Title and Description
 
 ## Title: Flight Delay Prediction System
+Airlines operate thousands of flights every day, and delays can disrupt schedules, increase operational costs, and reduce passenger satisfaction. This project develops a machine learning classification model that predicts whether a flight will be on time or delayed using historical flight information such as departure time, flight duration, airline, departure airport, destination airport, and day of the week.
 
-Airlines operate thousands of flights every day, and flight delays create problems for passengers, airports, and airline companies. Delays can increase operational costs, reduce customer satisfaction, and affect flight schedules.
-
-This project builds a machine learning classification model that predicts whether a flight will be delayed based on historical flight information such as airline, departure time, destination airport, distance, and other flight-related factors.
-
-The final deliverable is a machine learning prediction system that receives flight details and returns a delay prediction with a probability score. This system can be useful for airline planning, passenger notification systems, and operational decision-making.
+The final deliverable is a machine learning prediction system that classifies each flight as On-Time or Delayed, helping airlines improve operational planning and decision-making.
 
 ---
 
 # 3. Problem Type
 
-**Classification — binary output: Delayed or On-Time.**
+3. Problem Type
 
-The target column is **Delayed** (or a delay status column depending on the dataset).
+Classification — binary output: On-Time or Delayed.
 
-This is supervised learning because the model is trained using historical flight records where the final outcome (delay or no delay) is already known.
+The target column is Class. This is a supervised learning problem because the model is trained using historical flight records where the flight status is already known.
 
-Output:
+Target Variable:
 
-* 1 = Delayed
-* 0 = On-Time
+0 = On-Time
+1 = Delayed
 
+The goal of this project is to predict whether a flight will arrive on time or be delayed based on flight-related information.
 ---
 
 # 4. Dataset
 
-**Source:** Flight Delay Dataset from Kaggle.
+# Source: Kaggle – Airlines Delay Dataset
 
-**Size:** Depends on the selected dataset (usually thousands to millions of flight records).
+* Dataset Link:
+* https://www.kaggle.com/datasets/ulrikthygepedersen/airlines-delay
 
-**Target:**
+# Size:
+* 539,382 rows
+* 8 columns
+* 1 CSV file
 
-* Flight delay status (Delayed / Not Delayed)
+# Target:
 
+* Class — Indicates whether the flight was delayed or on time.
+* 0 = On-Time
+* 1 = Delayed
 ### Main Features:
 
-* Airline — airline company name (categorical)
-* Origin Airport — departure airport
-* Destination Airport — arrival airport
-* Scheduled Departure Time — planned departure time
-* Actual Departure Time — real departure time
-* Arrival Time — arrival information
-* Distance — flight distance (numeric)
-* Day of Week — travel day
-* Month — flight month
-* Weather conditions (if available)
-* Flight Duration — total flight time
-
+* Flight — Flight identification number
+* Time — Scheduled departure time
+* Length — Flight duration (minutes)
+* Airline — Airline code
+* AirportFrom — Departure airport
+* AirportTo — Destination airport
+* DayOfWeek — Day of the week (1–7)
 ### Preprocessing Plan:
 
-* Handle missing values
+* Handle missing values (if any)
 * Remove duplicate records
-* Convert date/time features
-* Extract useful features (hour, day, month)
-* Encode categorical variables
-* Scale numerical features
-* Stratified train/test split (80/20)
-
+* Drop unnecessary columns (if appropriate, e.g., Flight)
+* Encode categorical variables (Airline, AirportFrom, AirportTo)
+* Scale numerical features (Time, Length)
+* Perform a stratified train/test split (80/20)
 ---
 
 # 5. Algorithms I Plan to Train
