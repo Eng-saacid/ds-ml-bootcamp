@@ -1,7 +1,7 @@
 # Final Project Proposal
 
 ## 1. Certificate Name
-SAKARIYE JAMAC MOHAMED
+SAKARIYE JAMAC MOHAMED OSMAN
 
 ## 2. Project Title and Description
 **Title: Mobile Price Range Classification**
