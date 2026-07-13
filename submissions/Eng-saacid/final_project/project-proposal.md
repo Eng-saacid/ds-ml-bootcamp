@@ -64,7 +64,7 @@ The model predicts a continuous numerical value representing the student's overa
 
 ## 4. Dataset
 
-- **Source:** Student Social Media and Mental Health Impact Dataset (Kaggle).
+- **Source:** [Student Social Media and Mental Health Impact Dataset (Kaggle).](https://www.kaggle.com/datasets/shivasingh4945/student-social-media-and-mental-health-impact).
 - **Size:** Approximately 5,000 rows, 13 columns.
 - **Classification Target:** `Stress_Level` — predicts whether a student's stress level is Low, Medium, High, or Very High.
 - **Regression Target:** `Mental_Health_Score` — predicts the student's overall mental health score.
