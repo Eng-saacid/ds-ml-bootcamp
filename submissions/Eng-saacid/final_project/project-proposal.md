@@ -10,8 +10,6 @@
 
 **Saacid Abdiaziiz Yuusuf**
 
-*(Replace with your full legal name as you want it to appear on your certificate.)*
-
 ---
 
 # 2. Project Title and Description
