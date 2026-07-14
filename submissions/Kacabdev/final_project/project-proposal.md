@@ -29,7 +29,7 @@ This is supervised learning. The dataset already contains websites that have bee
 ## 4. Dataset
 
 - **Source:** [Phishing Websites Dataset](https://archive.ics.uci.edu/dataset/327/phishing+websites) (UCI Machine Learning Repository, also mirrored on Kaggle).
-- **Size:** 11,055 rows, 32 features.
+- **Size:** the original dataset has 11,055 rows and 32 features. I'll work with a random sample of about **3,000 rows** to keep training and iteration fast, which is still well above the 1,000-row minimum.
 - **Target column:** `Result`, whether the website is phishing or legitimate.
 - **Main features:**
   - `having_IP_Address`: whether the URL uses a raw IP address instead of a domain name
@@ -43,7 +43,7 @@ This is supervised learning. The dataset already contains websites that have bee
 
 Most features in this dataset are already encoded as small numeric categories (for example -1, 0, 1), which makes it a clean fit for classic classification models.
 
-**Preprocessing plan:** check for and handle any missing values, confirm all features are in a consistent numeric encoding, scale where needed, and split into an 80/20 train/test set, stratified on `Result` so both sets keep a similar phishing-to-legitimate ratio.
+**Preprocessing plan:** draw a stratified random sample of about 3,000 rows from the original 11,055 so the phishing-to-legitimate ratio stays the same as the full dataset, check for and handle any missing values, confirm all features are in a consistent numeric encoding, scale where needed, and split the sample into an 80/20 train/test set, stratified on `Result`.
 
 ---
 
